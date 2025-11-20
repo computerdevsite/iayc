@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: 'arial', sans-serif;
+  }
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+  }
+
+.logo {
+    width: 20%;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+  }
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    
+  }
+.nav-links {
+  z-index: 999;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 10px 0px 15px 10px;
+  }
+
+.nav-links a:hover {
+    color: #ffcc00;
+  }
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+.close-btn {
+    display: none;
+    align-self: flex-end;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+    color: white;
+    height: 60px;
+  }
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.itemImage{
+    height: auto;
+    width: 20rem;
+}
+section{
+    padding: 20px;
+
+	width: 65%;
+	margin: 20px 0px 20px 0px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+
+.paragraph{
+	width: 300px;
+	
+}
+
+main{
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
+  
+     /* RESPONSIVE ADDITIONS */
+    @media (max-width: 768px) {
+      .carousel { height:250px; }
+      .prev, .next { padding:8px 12px; font-size:16px; }
+      .dot { height:10px; width:10px; }
+    }
+
+  
+
+  /* Mobile Styles */
+  @media (max-width: 480px) {
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #000000;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.3s ease;
+      
+     
+    }
+
+    header{
+        flex-direction: row;
+    }
+
+    .nav-links.show {
+      max-height: 300px; /* adjust if more links */
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+     .paragraph{
+        margin: 20px 0px 0px 0px;
+        width: auto;
+    }
+
+    section{
+        padding: 30px;
+        width: auto;
+    }
+
+    .itemImage{
+        height: auto;
+        width: 15rem;
+    }
+
+    .logo {
+        width: 35%;
+        height: auto;
+        margin: 10px 0px 10px 0px;
+      }
+
+      .close-btn {
+        display: block;
+      }
+
+	.paragraph{
+	width: auto;
+	
+  }
+
+  .carousel { height:auto; }
+      .prev, .next { padding:6px 10px; font-size:14px; }
+      .dot { height:8px; width:8px; }
+
+
+  }
+
+      /* SIMPLE CAROUSEL STYLE (ADD ONLY, NO CHANGES TO EXISTING CSS FILE) */
+    .carousel {
+      width:100%;
+      max-width:1080px;
+      height:auto;
+      margin:20px auto;
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+    }
+    .carousel-slide { display:none; width:100%; height:100%; }
+    .carousel-slide img { width:100%; height:100%; object-fit:cover; }
+
+    .prev, .next {
+      position:absolute;
+      top:50%; transform:translateY(-50%);
+      background:rgba(0,0,0,0.5);
+      color:#fff;
+      padding:10px 14px;
+      border:none;
+      cursor:pointer;
+      font-size:18px;
+      border-radius:4px;
+    }
+    .prev { left:10px; }
+    .next { right:10px; }
+
+    .dots { text-align:center; margin-top:10px; }
+    .dot {
+      height:12px; width:12px;
+      background:#bbb;
+      display:inline-block;
+      margin:0 5px;
+      border-radius:50%;
+      cursor:pointer;
+    }
+    .active { background:#333; }
+
+
+    /*LOADING STYLE*/
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* FULLSCREEN LOADING SCREEN */
+    #loading-spinner {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      display: none;
+    }
+
+    /* LOGO */
+    #loading-logo-text {
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      font-family: 'Trebuchet MS', sans-serif;
+      letter-spacing: -2px;
+      margin-bottom: -8px; /* overlap with bar */
+    }
+
+    /* COLOR BLOCKS */
+    .color-bar {
+      display: flex;
+      gap: 6px;
+    }
+
+    .block {
+      width: 28px;
+      height: 18px;
+      opacity: 0.2;
+      animation: glow 2.5s infinite;
+    }
+
+    /* SEQUENTIAL ANIMATION */
+    .block:nth-child(1) { background: #df1e1e; animation-delay: 0s; }
+    .block:nth-child(2) { background: #ff6a00; animation-delay: 0.1s; }
+    .block:nth-child(3) { background: #ffd000; animation-delay: 0.2s; }
+    .block:nth-child(4) { background: #a4e100; animation-delay: 0.3s; }
+    .block:nth-child(5) { background: #21c45a; animation-delay: 0.4s; }
+    .block:nth-child(6) { background: #00c1c7; animation-delay: 0.5s; }
+    .block:nth-child(7) { background: #006ad1; animation-delay: 0.6s; }
+    .block:nth-child(8) { background: #4b2bbf; animation-delay: 0.7s; }
+    .block:nth-child(9) { background: #a41aa4; animation-delay: 0.8s; }
+    .block:nth-child(10){ background: #d2163c; animation-delay: 0.9s; }
+
+    @keyframes glow {
+      0%   { opacity: 0.2; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.2; }
+    }
+
+    .page-content {
+      padding: 40px;
+    }
+    /* RESPONSIVE STYLES */
+    @media (max-width: 600px) {
+      #loading-logo {
+        width: 160px;
+      }
+      .block {
+        width: 20px;
+        height: 14px;
+      }
+      .color-bar {
+        gap: 4px;
+      }
+    }
+
+
+
+
+  
+  

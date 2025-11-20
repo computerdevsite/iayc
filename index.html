@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INK ALL-YOU-CAN</title>
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    
+
+</style>
+</head>
+<body>
+
+<header>
+    <img class="logo" src="image/logo.png">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="product.html">PRODUCTS</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</header>
+<main>
+
+  <!-- CAROUSEL -->
+  <div class="carousel">
+    <div class="carousel-slide"><img src="image/smmg_banner.png"></div>
+    <div class="carousel-slide"><img src="image/banner1.png"></div>
+    <div class="carousel-slide"><img src="image/smne_banner.png"></div>
+    <div class="carousel-slide"><img src="image/banner2.png"></div>
+    
+
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+
+  </div>
+
+<section>
+    <p><b>INK ALL-YOU-CAN (IAYC)</b> is recognized as Metro Manila's premier ink refilling station and a trusted
+        supplier of alternative printer consumables since 2005. We specialize in providing reliable and high-quality
+        products through advanced remanufacturing and refilling technologies for both inkjet and laser printers.
+        
+    </p>
+
+
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2025 ink all you. All rights reserved.</p>
+</footer>
+
+<!-- LOADING SCREEN --> 
+  <div id="loading-spinner">
+    <div id="loading-logo-text">ink all-you-can</div>
+    
+  <div class="color-bar">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
+  
+  </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

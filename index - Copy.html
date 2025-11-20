@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INK ALL-YOU-CAN</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+
+    <img class="logo" src="image/logo.png">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="product.html">PRODUCTS</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICES</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</header>
+<main>
+<section>
+
+</section>
+    
+</main>
+
+
+
+<footer>
+    <p>&copy; 2025 ink all you. All rights reserved.</p>
+</footer>
+
+<script>
+  const navLinks = document.getElementById("navLinks");
+  const hamburger = document.getElementById("hamburger");
+
+  function toggleMenu() {
+    navLinks.classList.toggle("show");
+
+    // Palitan icon ng hamburger/close
+    if (navLinks.classList.contains("show")) {
+      hamburger.textContent = "✖";
+    } else {
+      hamburger.textContent = "☰";
+    }
+  }
+
+  // Close when clicking outside
+  document.addEventListener("click", function (event) {
+    const isClickInside = navLinks.contains(event.target) || hamburger.contains(event.target);
+    if (!isClickInside && navLinks.classList.contains("show")) {
+      navLinks.classList.remove("show");
+      hamburger.textContent = "☰"; // Ibalik ang hamburger icon
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
+
+
